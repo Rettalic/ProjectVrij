@@ -23,8 +23,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     //timer-----------------------------------------
     public float coolDownTime = 2f;
-    private float nextFireTime = 0;
-
+    
     //collision-------------------------------------
     bool bColliding;
     public Transform colliderCheck;
