@@ -20,4 +20,9 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public void StartScreen()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
