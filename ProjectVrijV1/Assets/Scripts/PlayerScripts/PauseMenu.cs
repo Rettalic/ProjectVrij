@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject MenuObj;
 
 
-    void Start()
+    void Awake()
     {
         pauseMenuobj.SetActive(false);
 
@@ -30,6 +31,11 @@ public class PauseMenu : MonoBehaviour
             else {
                 PauseGame();
             }
+        }
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(0);
         }
 
     }
@@ -59,6 +65,18 @@ public class PauseMenu : MonoBehaviour
     {
         MenuObj.SetActive(true);
         Optionobj.SetActive(false);
+    }
+
+    public void MainMenuChange()
+    {
+        Time.timeScale = 1f;
+        Debug.Log("te");
+        SceneManager.LoadScene(0);
+    }
+
+    public void change()
+    {
+
     }
 
 

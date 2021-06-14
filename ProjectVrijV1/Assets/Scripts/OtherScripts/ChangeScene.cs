@@ -23,6 +23,7 @@ public class ChangeScene : MonoBehaviour
 
     public void StartScreen()
     {
+        Debug.Log("te");
         SceneManager.LoadScene(0);
     }
 }
