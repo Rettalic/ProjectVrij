@@ -13,7 +13,7 @@ public class BulletScript : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(transform.forward * Time.deltaTime * speed *-1);
+        transform.Translate(transform.forward * Time.deltaTime * speed);
     }
 
     void OnTriggerEnter(Collider other)
@@ -23,10 +23,6 @@ public class BulletScript : MonoBehaviour
             return;
         }
 
-        if (other.CompareTag("Vase"))
-        {
-            Destroy(other);
-        }
         Destroy(gameObject);
     }
 }

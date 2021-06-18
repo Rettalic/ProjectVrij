@@ -8,6 +8,7 @@ public class EnemyAI : MonoBehaviour
     public NavMeshAgent agent;
 
     public Transform player;
+    public Transform enemy;
     public GameObject bullet;
     public Transform bulletSpawn;
 
