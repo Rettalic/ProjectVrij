@@ -7,9 +7,11 @@ public class FollowPlayer2 : MonoBehaviour
 {
     public NavMeshAgent agent;
 
-    public Transform player;
-    public Transform player2;
+    public Animator animator;
+    public float InputX;
+    public float InputY;
 
+    public Transform player;
 
     public int companionHealth;
     public int companionDamageGive;
@@ -17,17 +19,21 @@ public class FollowPlayer2 : MonoBehaviour
     public bool canFollow;
     public bool isFollowing;
 
+    public int commandDistance = 6;
+
     //patrolling
     public Vector3 walkPoint;
     public float walkPointRange;
 
     //states
-    public float sightRange;
+    public float sightRange; 
     bool playerInsightRange;
 
     void Start()
     {
         agent = gameObject.GetComponent<NavMeshAgent>();
+        animator = this.gameObject.GetComponent<Animator>();
+
         canFollow = true;
         isFollowing = true;
     }
@@ -46,12 +52,34 @@ public class FollowPlayer2 : MonoBehaviour
 
         if (playerInsightRange && canFollow == true) ChasePlayer();
 
-
         if (companionHealth <= 0)
         {
             Destroy(gameObject);
-            GoldPoints.Instance.dropGold(5);
         }
+
+        if (isFollowing == false)
+        {
+            InputX = 0;
+            InputY = 0;
+           animator.SetFloat("InputX", InputX);
+           animator.SetFloat("InputY", InputY);
+        }
+
+        if(Vector3.Distance(player.transform.position, transform.position) < 0.6f)
+        {
+            InputX = 0;
+            InputY = 0;
+            animator.SetFloat("InputX", InputX);
+            animator.SetFloat("InputY", InputY);
+        }
+        else if(isFollowing == true)
+        {
+            InputX = 1;
+            InputY = 1;
+            animator.SetFloat("InputX", InputX);
+            animator.SetFloat("InputY", InputY);
+        }
+
     }
 
     private void ChasePlayer()
@@ -75,7 +103,7 @@ public class FollowPlayer2 : MonoBehaviour
 
     private void StayPut()
     {
-        if (Input.GetKeyDown(KeyCode.F) && isFollowing == true && Vector3.Distance(player2.transform.position, transform.position) < 4)
+        if (Input.GetKeyDown(KeyCode.F) && isFollowing == true && Vector3.Distance(player.transform.position, transform.position) < commandDistance)
         {
             isFollowing = false;
             canFollow = false;
@@ -84,10 +112,16 @@ public class FollowPlayer2 : MonoBehaviour
 
     private void ComeWithPlayer()
     {
-        if (Input.GetKeyDown(KeyCode.E) && isFollowing == false && Vector3.Distance(player2.transform.position, transform.position) < 4)
+        if (Input.GetKeyDown(KeyCode.E) && isFollowing == false && Vector3.Distance(player.transform.position, transform.position) < commandDistance)
         {
             isFollowing = true;
             canFollow = true;
+
+            InputX = 1;
+            InputY = 1;
+            animator.SetFloat("InputX", InputX);
+            animator.SetFloat("InputY", InputY);
+
         }
     }
     private void OnDrawGizmosSelected()
