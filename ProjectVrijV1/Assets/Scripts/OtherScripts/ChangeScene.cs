@@ -21,6 +21,11 @@ public class ChangeScene : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene(1);
+    }
+
     public void StartScreen()
     {
         Debug.Log("te");

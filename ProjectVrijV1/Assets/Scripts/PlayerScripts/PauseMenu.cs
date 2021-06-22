@@ -16,5 +16,9 @@ public class PauseMenu : MonoBehaviour
 
     }
 
+    public void resumeGame()
+    {
+        SceneManager.LoadScene(1);
+    }
 
 }
