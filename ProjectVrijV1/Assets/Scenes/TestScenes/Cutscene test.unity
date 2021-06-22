@@ -224,6 +224,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1710579525}
   delay: 0.01
   timeLeft: 5
+  number: 0
 --- !u!4 &674051818
 Transform:
   m_ObjectHideFlags: 0
@@ -734,6 +735,15 @@ MonoBehaviour:
     sentences:
     - holy shit het werkt gewoon
     - damn son
+    - e
+    - eee
+    - eeeeeeeeeeeeeeeeeeeeeeeeeeeee
+    - eeeeeeeeeeeeeeeeeeeeee
+    - eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+    - eeeeeeeeeeeeeeeeeeeeeeeeeeeee
+    - eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+    - aaaa
+    - eeeeeeeeeeeeeeeeeeeeeeeeeeeeeaaaeee
     - 'its working
 
 '
