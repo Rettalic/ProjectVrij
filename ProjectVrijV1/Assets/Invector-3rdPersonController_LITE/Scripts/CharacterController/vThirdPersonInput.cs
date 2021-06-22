@@ -19,6 +19,7 @@ namespace Invector.vCharacterController
         public Camera cameraMain;
 
         public Animator animator;
+        public float input;
 
 
         protected virtual void Start()
@@ -32,17 +33,28 @@ namespace Invector.vCharacterController
             cc.UpdateMotor();               // updates the ThirdPersonMotor methods
             cc.ControlLocomotionType();     // handle the controller locomotion type and movespeed
             cc.ControlRotationType();       // handle the controller rotation type
+
+            if (cc.input.x > 0.1f || cc.input.z > 0.1f || cc.input.x < -0.1f || cc.input.z < -0.1f) {
+                input = 1;
+                animator.SetFloat("Input", input);
+            }
+            else
+            {
+                input = 0;
+                animator.SetFloat("Input", input);
+            }
+
         }
 
         protected virtual void Update()
         {
             InputHandle();                  // update the input methods
-            cc.UpdateAnimator();            // updates the Animator Parameters
+           // cc.UpdateAnimator();            // updates the Animator Parameters
         }
 
         public virtual void OnAnimatorMove()
         {
-            cc.ControlAnimatorRootMotion(); // handle root motion animations 
+            //cc.ControlAnimatorRootMotion(); // handle root motion animations 
         }
 
         #region Basic Locomotion Inputs

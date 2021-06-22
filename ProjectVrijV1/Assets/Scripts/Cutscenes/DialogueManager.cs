@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     public float delay = 0.1f;
     private Queue<string> sentences;
     public float timeLeft = 5f;
+    public bool number;
 
     // Start is called before the first frame update
     void Start()
@@ -18,10 +19,15 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-    private void Update()
+    void Update()
     {
-        if (timeLeft < 0)
+        if (Input.GetKeyDown(KeyCode.T)){
+            DisplayNextSentence();
+        }
+
+        if(number == true)
         {
+            number = false;
             DisplayNextSentence();
         }
     }
@@ -29,19 +35,16 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {   
         sentences.Clear();
-        StartCoroutine(Countdown());
-
+        StartCoroutine(NextSentence());
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
         }
-
         DisplayNextSentence();
     }
+
     public void DisplayNextSentence() 
     {
-        StartCoroutine(Countdown());
-
         if (sentences.Count == 0)
         {
             EndDialogue();
@@ -51,6 +54,7 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(NextSentence());
     }
 
     IEnumerator TypeSentence(string sentence) 
@@ -62,21 +66,16 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
     }
-    private IEnumerator Countdown()
+
+    IEnumerator NextSentence()
     {
-        timeLeft = 5f;
 
-        timeLeft -= 1;
-
-        if (timeLeft < 0)
-        {
-            timeLeft = 5f;
-        }
-
-        yield return null;
+        yield return new WaitForSeconds(3f);
+        number = true;
     }
 
-        void EndDialogue() 
+    void EndDialogue() 
     {
+        gameObject.SetActive(false);
     }
 }

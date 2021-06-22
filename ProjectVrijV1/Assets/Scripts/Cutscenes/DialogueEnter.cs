@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class DialogueEnter : MonoBehaviour
 {
-
     public GameObject dialogueUI;
     private bool hasEntered;
+    public DialogueManager diaMan;
 
     public Dialogue dialogue;
 
@@ -16,12 +16,8 @@ public class DialogueEnter : MonoBehaviour
         {
             hasEntered = true;
             dialogueUI.SetActive(true);
-            TriggerDialogue();
+            diaMan.StartDialogue(dialogue);
         }
     }
 
-    public void TriggerDialogue() 
-    {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-    }
 }

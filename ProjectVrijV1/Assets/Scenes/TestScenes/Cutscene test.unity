@@ -223,6 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1710579525}
   delay: 0.01
+  timeLeft: 5
 --- !u!4 &674051818
 Transform:
   m_ObjectHideFlags: 0
@@ -538,6 +539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 1710579523}
+  diaMan: {fileID: 0}
   dialogue:
     sentences:
     - aaaaaaaaaaaa
@@ -727,6 +729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 1710579523}
+  diaMan: {fileID: 674051817}
   dialogue:
     sentences:
     - holy shit het werkt gewoon
