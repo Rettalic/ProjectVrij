@@ -4,24 +4,22 @@ namespace Invector.vCharacterController
 {
     public class vThirdPersonInput : MonoBehaviour
     {
-        #region Variables       
-
-        [Header("Controller Input")]
+        
         public string horizontalInput = "Horizontal";
         public string verticallInput = "Vertical";
         public KeyCode jumpInput = KeyCode.Space;
         public KeyCode strafeInput = KeyCode.Tab;
         public KeyCode sprintInput = KeyCode.LeftShift;
 
-        [Header("Camera Input")]
         public string rotateCameraXInput = "Mouse X";
         public string rotateCameraYInput = "Mouse Y";
 
-        [HideInInspector] public vThirdPersonController cc;
-        [HideInInspector] public vThirdPersonCamera tpCamera;
-        [HideInInspector] public Camera cameraMain;
+        public vThirdPersonController cc;
+        public vThirdPersonCamera tpCamera;
+        public Camera cameraMain;
 
-        #endregion
+        public Animator animator;
+
 
         protected virtual void Start()
         {
