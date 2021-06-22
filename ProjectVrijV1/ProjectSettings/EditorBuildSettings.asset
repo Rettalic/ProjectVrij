@@ -15,9 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+<<<<<<< Updated upstream
     path: Assets/Scenes/MainMenu.unity
     guid: 2c84bd0988bb9854daa7494d5478e23f
   - enabled: 1
+=======
+>>>>>>> Stashed changes
     path: Assets/Scenes/Options.unity
     guid: 023411ca71a1e104f9d060559c871662
   m_configObjects: {}

@@ -49,7 +49,6 @@ public class EnemyAI : MonoBehaviour
         if (enemyHealth <= 0)
         {
             Destroy(gameObject);
-            GoldPoints.Instance.dropGold(5);
         }
     }
 
