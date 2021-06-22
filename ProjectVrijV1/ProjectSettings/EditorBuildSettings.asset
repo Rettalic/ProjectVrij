@@ -8,19 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartScreen.unity
     guid: c8f9274b20f272d4c992ec8bdf93189a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Invector_BasicLocomotion.unity
     guid: 12a4d75da2db4d3439c09e07c73a85b2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-<<<<<<< Updated upstream
-    path: Assets/Scenes/MainMenu.unity
-    guid: 2c84bd0988bb9854daa7494d5478e23f
+    path: Assets/Scenes/MainScenes/LEVEL1.unity
+    guid: 3c65fc22d17ec414ba3c6030e09f6b58
   - enabled: 1
-=======
->>>>>>> Stashed changes
-    path: Assets/Scenes/Options.unity
-    guid: 023411ca71a1e104f9d060559c871662
+    path: Assets/Scenes/MainScenes/LEVEL2.unity
+    guid: e2f01821aa3b1fe4ba58bac47675a850
   m_configObjects: {}
