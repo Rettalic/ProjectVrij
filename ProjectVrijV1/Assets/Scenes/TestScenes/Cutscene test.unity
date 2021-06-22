@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 1710579523}
-  diaMan: {fileID: 0}
+  diaMan: {fileID: 674051817}
   dialogue:
     sentences:
     - aaaaaaaaaaaa
