@@ -23,7 +23,7 @@ public class ChangeScene : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
 
     public void StartScreen()
