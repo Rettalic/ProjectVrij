@@ -11,10 +11,14 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
 
     }
 
+    public void resumeGame()
+    {
+        SceneManager.LoadScene(1);
+    }
 
 }
