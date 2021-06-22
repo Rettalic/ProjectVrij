@@ -8,10 +8,12 @@ public class PlayerHealthbar : MonoBehaviour
     private float nextActionTime = 0.0f;
     public float period = 0.1f;
 
+    public GameObject playerCharacterPortraitDeath;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerCharacterPortraitDeath.SetActive(false);
     }
 
     // Update is called once per frame
@@ -23,6 +25,10 @@ public class PlayerHealthbar : MonoBehaviour
         {
             nextActionTime += period;
             image.fillAmount -= .01f;
+
+            if(image.fillAmount < 0.00001) {
+                playerCharacterPortraitDeath.SetActive(true);
+            }
         }
     }
 }
