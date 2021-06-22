@@ -28,7 +28,7 @@ public class ShootController : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetMouseButton(1) || Input.GetKeyDown(KeyCode.F))
+        if (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.F))
         {
             partSy.Play();
             ShootBullet();
