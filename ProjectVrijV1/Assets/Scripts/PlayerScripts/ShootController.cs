@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class ShootController : MonoBehaviour
 {
-    public GameObject kunai;
-    public Transform kunaiSpawnPoint;
+    public GameObject bullet;
+    public Transform bulletSpawn;
+    public ParticleSystem partSy;
 
-    public GameObject shuriken;
-    public Transform shurikenSpawnPoint;
-    public int shurikenAmount;
-    public GameObject rotationObject;
-    public float shurikenDelay;
+
 
     private static ShootController _instance;
 
@@ -29,26 +26,22 @@ public class ShootController : MonoBehaviour
         }
     }
 
-    public void ShootKunai()
+    public void Update()
+    {
+        if (Input.GetMouseButton(1) || Input.GetKeyDown(KeyCode.F))
+        {
+            partSy.Play();
+            ShootBullet();
+            Debug.Log("YEET");
+        }
+    }
+
+    public void ShootBullet()
     {
         Debug.Log("shoot");
-        Instantiate(kunai, kunaiSpawnPoint.position, kunaiSpawnPoint.rotation);
+        Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
     }
 
-    public void ShootShuriken()
-    {
-        StartCoroutine(ShootAround());
-    }
-
-    IEnumerator ShootAround()
-    {
-        for (int i = 0; i < shurikenAmount; i++)
-        {
-            Instantiate(shuriken, shurikenSpawnPoint.position, shurikenSpawnPoint.rotation);
-            yield return new WaitForSeconds(shurikenDelay);
-            rotationObject.transform.Rotate(Vector3.up, 360.0f / (shurikenAmount), Space.Self);
-        }
-
-    }
+    
 }
 

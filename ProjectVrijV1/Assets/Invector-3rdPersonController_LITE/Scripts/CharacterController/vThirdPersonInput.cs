@@ -37,6 +37,7 @@ namespace Invector.vCharacterController
             if (cc.input.x > 0.1f || cc.input.z > 0.1f || cc.input.x < -0.1f || cc.input.z < -0.1f) {
                 input = 1;
                 animator.SetFloat("Input", input);
+
             }
             else
             {
