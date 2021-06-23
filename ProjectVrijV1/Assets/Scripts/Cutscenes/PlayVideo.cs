@@ -38,12 +38,15 @@ public class PlayVideo : MonoBehaviour
     {
         if (video == true)
         {
-            timeLeft -= Time.deltaTime;
-
-            if (timeLeft == 0)
-            {
-                SceneManager.LoadScene(0);
-            }
+            StartCoroutine(timer());
         }
+    }
+
+    public IEnumerator timer()
+    {
+
+        
+        yield return new WaitForSeconds(100);
+        SceneManager.LoadScene(0);
     }
 }

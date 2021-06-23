@@ -979,7 +979,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &348427367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1027,8 +1027,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1093,8 +1093,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000002861, y: -170.7}
-  m_SizeDelta: {x: 617.40906, y: 50}
+  m_AnchoredPosition: {x: 0.000022888, y: -425}
+  m_SizeDelta: {x: 1483.6798, y: 157.52307}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &355703564
 GameObject:
@@ -1586,7 +1586,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &462809667
 PrefabInstance:
@@ -1908,7 +1908,7 @@ Transform:
   m_LocalScale: {x: 8.078685, y: 5.2198, z: 8.983798}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &468518213
 MonoBehaviour:
@@ -1932,7 +1932,7 @@ PrefabInstance:
     - target: {fileID: 8773186604243509320, guid: 65602f1cc64968242a590d34c9f3537d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8773186604243509320, guid: 65602f1cc64968242a590d34c9f3537d,
         type: 3}
@@ -2387,12 +2387,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &641852380 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 8773186604243509324, guid: 65602f1cc64968242a590d34c9f3537d,
-    type: 3}
-  m_PrefabInstance: {fileID: 497068388}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &662943435 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 821f83fbe6a1fe3489b29810200f11be,
@@ -2472,7 +2466,7 @@ Transform:
   m_Children:
   - {fileID: 936284896}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &692673848 stripped
 MonoBehaviour:
@@ -2632,7 +2626,7 @@ MonoBehaviour:
   diaMan: {fileID: 190861078}
   dialogue:
     sentences:
-    - 'Nara: I feel it too, we better thread carefully'
+    - 'Nara: I feel it too, we better tread carefully'
     - '
 
 '
@@ -2996,7 +2990,7 @@ Transform:
   m_LocalScale: {x: 9.139958, y: 9.139958, z: 9.139958}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: -179.548, y: 0, z: 0}
 --- !u!1001 &850230219
 PrefabInstance:
@@ -9550,72 +9544,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 16e8b38ab0ae82f4cb2993c998da1a41, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ec7b5249004d794b9874900d051932f, type: 3}
---- !u!1 &1236112330
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1236112332}
-  - component: {fileID: 1236112331}
-  m_Layer: 0
-  m_Name: Video Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!328 &1236112331
-VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1236112330}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 39b9b0a6982d4b64c8416d2ea17a50b8, type: 3}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 641852380}
-  m_TargetTexture: {fileID: 0}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: _MainTex
-  m_RenderMode: 1
-  m_AspectRatio: 2
-  m_DataSource: 0
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 0.051
-  m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 0
-  m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
---- !u!4 &1236112332
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1236112330}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 168.66838, y: 71.143105, z: 148.88292}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1239339680 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 821f83fbe6a1fe3489b29810200f11be,
