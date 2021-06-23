@@ -52,7 +52,7 @@ MonoBehaviour:
     m_Value: 0
   focusDistance:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 8.74
     min: 0.1
   aperture:
     m_OverrideState: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
     min: 1
     max: 32
   focalLength:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 50
     min: 1
     max: 300
@@ -99,7 +99,7 @@ MonoBehaviour:
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 1.3
     min: 0
   scatter:
     m_OverrideState: 0
