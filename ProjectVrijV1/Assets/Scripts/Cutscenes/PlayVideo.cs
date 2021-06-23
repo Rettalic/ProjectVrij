@@ -12,6 +12,7 @@ public class PlayVideo : MonoBehaviour
 
     public GameObject UI;
     public GameObject Ambience;
+    public GameObject CompanionSounds;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class PlayVideo : MonoBehaviour
 
         UI.SetActive(false);
         Ambience.SetActive(false);
+        CompanionSounds.SetActive(false);
 
         videoPlayer.SetActive(true);
         //Destroy(videoPlayer, timeToStop);
