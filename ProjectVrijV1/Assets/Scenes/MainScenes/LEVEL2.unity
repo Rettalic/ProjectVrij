@@ -1264,6 +1264,7 @@ MonoBehaviour:
   video: 0
   UI: {fileID: 1096674421}
   Ambience: {fileID: 2146256368}
+  CompanionSounds: {fileID: 1398414056}
 --- !u!65 &512904791
 BoxCollider:
   m_ObjectHideFlags: 0
