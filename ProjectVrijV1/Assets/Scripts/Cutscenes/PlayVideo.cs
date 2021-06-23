@@ -11,6 +11,7 @@ public class PlayVideo : MonoBehaviour
     public bool video;
 
     public GameObject UI;
+    public GameObject Ambience;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class PlayVideo : MonoBehaviour
         Debug.Log(timeLeft);
 
         UI.SetActive(false);
+        Ambience.SetActive(false);
 
         videoPlayer.SetActive(true);
         //Destroy(videoPlayer, timeToStop);
