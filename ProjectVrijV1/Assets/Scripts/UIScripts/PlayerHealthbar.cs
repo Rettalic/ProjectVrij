@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthbar : MonoBehaviour
 {
@@ -43,14 +44,19 @@ public class PlayerHealthbar : MonoBehaviour
             playerOxygenBar.fillAmount += .002f;
         }
 
-        if (playerOxygenBar.fillAmount > 1)
+        if (playerOxygenBar.fillAmount > 1f)
         {
-            playerOxygenBar.fillAmount = 1;
+            playerOxygenBar.fillAmount = 1f;
         }
 
-        if (playerOxygenBar.fillAmount < 0.001)
+        if (playerOxygenBar.fillAmount < 0.001f)
         {
             playerHealthBar.fillAmount -= .001f;
+        }
+
+        if (playerHealthBar.fillAmount < 0.01f)
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }

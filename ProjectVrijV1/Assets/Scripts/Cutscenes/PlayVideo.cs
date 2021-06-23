@@ -10,6 +10,8 @@ public class PlayVideo : MonoBehaviour
     public float timeLeft = 20f;
     public bool video;
 
+    public GameObject UI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,8 @@ public class PlayVideo : MonoBehaviour
     {
         video = true;
         Debug.Log(timeLeft);
+
+        UI.SetActive(false);
 
         videoPlayer.SetActive(true);
         //Destroy(videoPlayer, timeToStop);
